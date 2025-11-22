@@ -8,13 +8,18 @@ app.get('/', (req, res) =>{
   res.send('Hello World!');
 });
 
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+app.use(express.json());
+
+const authRoutes = require('./routes/auth.routes');
+app.use('/Stockmaster', authRoutes);
+
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('Connected to MongoDB');
-})
+  })
   .catch((error) => {
     console.error('Error connecting to MongoDB:', error);
-});
+  });
 
 app.listen(process.env.PORT || 3000, () => {
   console.log(`Example app listening on port ${process.env.PORT || 3000}!`);
