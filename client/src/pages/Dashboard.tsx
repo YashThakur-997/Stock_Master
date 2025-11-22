@@ -9,8 +9,8 @@ const Dashboard = () => {
 
       {/* Hero Section / Welcome Message (Optional but adds to premium feel) */}
       <div className="flex flex-col space-y-2">
-        <h2 className="text-3xl font-bold tracking-tight">Overview</h2>
-        <p className="text-muted-foreground">Manage your inventory operations and logistics.</p>
+        <h2 className="text-3xl font-bold tracking-tight relative top-3">Overview</h2>
+        <p className="text-muted-foreground relative top-3">Manage your inventory operations and logistics.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
