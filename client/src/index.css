@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Toon-style pastel palette */
+    --background: 45 30% 98%;
+    --foreground: 220 20% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 25%;
+
+    /* Soft sky blue primary */
+    --primary: 210 80% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 85% 75%;
+    --primary-glow: 210 90% 85%;
+
+    /* Mint green secondary */
+    --secondary: 150 60% 70%;
+    --secondary-foreground: 150 60% 20%;
+    --secondary-light: 150 65% 85%;
+
+    /* Soft lavender accent */
+    --accent: 260 50% 75%;
+    --accent-foreground: 260 50% 25%;
+    --accent-light: 260 55% 90%;
+
+    /* Sunny yellow warning */
+    --warning: 45 95% 70%;
+    --warning-foreground: 45 80% 25%;
+    --warning-light: 45 100% 88%;
+
+    /* Soft muted tones */
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 15% 50%;
+
+    --destructive: 0 70% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 88%;
+    --input: 220 20% 95%;
+    --ring: 210 80% 60%;
+
+    --radius: 1rem;
+
+    /* Sidebar pastel theme */
+    --sidebar-background: 210 50% 97%;
+    --sidebar-foreground: 220 20% 30%;
+    --sidebar-primary: 210 80% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 60% 92%;
+    --sidebar-accent-foreground: 220 20% 30%;
+    --sidebar-border: 220 20% 90%;
+    --sidebar-ring: 210 80% 60%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 80% 60%), hsl(260 50% 75%));
+    --gradient-secondary: linear-gradient(135deg, hsl(150 60% 70%), hsl(180 60% 70%));
+    --gradient-accent: linear-gradient(135deg, hsl(260 50% 75%), hsl(280 50% 75%));
+    --gradient-warning: linear-gradient(135deg, hsl(45 95% 70%), hsl(35 95% 65%));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(210 80% 60% / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(210 80% 60% / 0.2);
+    --shadow-float: 0 12px 40px -12px hsl(210 80% 60% / 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 25% 12%;
+    --foreground: 210 40% 95%;
+
+    --card: 220 20% 15%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 220 20% 15%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 210 80% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 50% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 20%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 260 45% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 25%;
+    --input: 220 20% 20%;
+    --ring: 210 80% 55%;
+
+    --sidebar-background: 220 25% 14%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 210 80% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 20%;
+    --sidebar-accent-foreground: 210 40% 90%;
+    --sidebar-border: 220 20% 22%;
+    --sidebar-ring: 210 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
